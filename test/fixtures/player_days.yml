@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player: 
+  day: 
+  vote: 9.99
+  goals: 1
+  yellowcards: 1
+  redcards: 1
+
+two:
+  player: 
+  day: 
+  vote: 9.99
+  goals: 1
+  yellowcards: 1
+  redcards: 1

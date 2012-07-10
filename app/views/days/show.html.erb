@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @day.number %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @day.day %>
+</p>
+
+<p>
+  <b>League:</b>
+  <%= @day.league %>
+</p>
+
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>

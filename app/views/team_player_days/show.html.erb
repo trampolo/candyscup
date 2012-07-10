@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team:</b>
+  <%= @team_player_day.team %>
+</p>
+
+<p>
+  <b>Player day:</b>
+  <%= @team_player_day.player_day %>
+</p>
+
+
+<%= link_to 'Edit', edit_team_player_day_path(@team_player_day) %> |
+<%= link_to 'Back', team_player_days_path %>

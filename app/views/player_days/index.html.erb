@@ -1,0 +1,33 @@
+<h1>Listing player_days</h1>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Day</th>
+    <th>Vote</th>
+    <th>Goals</th>
+    <th>Yellowcards</th>
+    <th>Redcards</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @player_days.each do |player_day| %>
+  <tr>
+    <td><%= player_day.player %></td>
+    <td><%= player_day.day %></td>
+    <td><%= player_day.vote %></td>
+    <td><%= player_day.goals %></td>
+    <td><%= player_day.yellowcards %></td>
+    <td><%= player_day.redcards %></td>
+    <td><%= link_to 'Show', player_day %></td>
+    <td><%= link_to 'Edit', edit_player_day_path(player_day) %></td>
+    <td><%= link_to 'Destroy', player_day, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Player day', new_player_day_path %>

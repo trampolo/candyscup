@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Player:</b>
+  <%= @player_day.player %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @player_day.day %>
+</p>
+
+<p>
+  <b>Vote:</b>
+  <%= @player_day.vote %>
+</p>
+
+<p>
+  <b>Goals:</b>
+  <%= @player_day.goals %>
+</p>
+
+<p>
+  <b>Yellowcards:</b>
+  <%= @player_day.yellowcards %>
+</p>
+
+<p>
+  <b>Redcards:</b>
+  <%= @player_day.redcards %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_day_path(@player_day) %> |
+<%= link_to 'Back', player_days_path %>
