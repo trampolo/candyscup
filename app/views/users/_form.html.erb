@@ -1,3 +1,5 @@
+<div class="center">
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -19,19 +21,8 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :crypted_password %><br />
-    <%= f.text_field :crypted_password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_salt %><br />
-    <%= f.text_field :password_salt %>
-  </div>
-  <div class="field">
-    <%= f.label :persistence_token %><br />
-    <%= f.text_field :persistence_token %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Register", :class => 'btn' %>
   </div>
 <% end %>
+</div>

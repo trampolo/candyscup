@@ -1,4 +1,8 @@
 Candyscup::Application.routes.draw do
+  get "page/home"
+
+  get "user_sessions/new"
+
   resources :team_player_days
 
   resources :teams
@@ -12,6 +16,15 @@ Candyscup::Application.routes.draw do
   resources :players
 
   resources :leagues
+
+
+  resources :user_sessions
+
+  match 'login' => "user_sessions#new",      :as => :login
+  match 'logout' => "user_sessions#destroy", :as => :logout
+  
+  root :to => 'page#home'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

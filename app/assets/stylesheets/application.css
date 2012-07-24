@@ -302,6 +302,7 @@ width:115px;
 	background:url(blackbtn.jpg) no-repeat center center;
 	width:68px;
 	height:21px;
+	color: white;
 }
 .btn a{
 	color:white;
@@ -432,4 +433,27 @@ width:115px;
 .txtf span {
 	color:orange;
 	text-align:center;
+}
+#user_nav {
+	color: white;
+	text-align: right;	
+}
+#user_nav a {
+	color: white;
+	font-weight: bold;
+	font-size: larger;
+} 
+.required {
+background-color: #FFE;
+}
+input:not([type=submit]):not([type=file]), select, textarea {
+	border: 1px solid #CCC;
+	margin: 2px 0;
+}
+select, input, textarea {
+	font: 99% arial,helvetica,clean,sans-serif;
+}
+.center {
+  margin-left: 50px ;
+  margin-right: auto ;
 }

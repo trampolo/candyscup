@@ -13,6 +13,16 @@
       <div id="Logo">
         <h1><a href="#">Soccer Field 1</a></h1>
       </div>
+      <div id="user_nav">
+      	<% if current_user %> 
+      		<%= "Signed in as #{current_user.username}." %>
+			<%= link_to "Sign out", logout_path %>
+		<% else %>
+			<%= link_to "Sign in", new_user_session_path %>
+			<%= "or" %>
+			<%= link_to "Register", new_user_path %>
+		<% end %>
+      </div>
       <div id="selSubHeader" class="clsFloatRight">
         <ul class="clsClearFixSub">
           <li class="clsActive"><a href="#">HOME</a></li>
@@ -27,87 +37,10 @@
     <div id="content">
       <div id="cbox">
         <div id="left" class="clearfix">
-          <div id="news">
-            <h2>More Soccer News</h2>
-            <div id="news_l"> <a href="#"><img src="news_img1.jpg" width="307" height="200" alt="newsimg1" /></a>
-              <div class="txt">
-                <h3>Lorem ipsum dolor sit amet consectetur </h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit eaque voluptatem accusantium doloremque laudantium, totam aperiam, eaque ipsa quae ab illo inventore veritatis et 			                    
-                	quasi architecto beatae vitae dicta sunt explicabo. </p>
-              </div>
-              <div  class="readmore clsFloatRight"> <a class="clsFloatRight" href="#">read more...</a> </div>
-            </div>
-            <div id="news_r"> <a href="#"><img src="news_img2.jpg" width="307" height="200" alt="newsimg1" /></a>
-              <div class="txt">
-                <h3>Lorem ipsum dolor sit amet consectetur </h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit eaque voluptatem accusantium doloremque laudantium, totam aperiam, eaque ipsa quae ab illo inventore veritatis et 			                  
-                	  quasi architecto beatae vitae dicta sunt explicabo. </p>
-              </div>
-              <div  class="readmore clsFloatRight"> <a class="clsFloatRight" href="#">read more...</a> </div>
-            </div>
-          </div>
-          <div id="events">
-            <h2>Top Events</h2>
-            <div class="e_list">
-              <div class="e_box"> <a href="#"><img src="ev_img1.jpg" width="121" height="78" alt="ev_img1"/></a>
-                <h3>July 18, 2010 <br/>
-                  Lorem ipsum dolor sit amet</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit eaque voluptatem accusantium.</p>
-              </div>
-              <div class="dotlineE"></div>
-              <div class="e_box"> <a href="#"><img src="ev_img2.jpg" width="121" height="78" alt="ev_img2"/></a>
-                <h3>July 18, 2010 <br/>
-                  Lorem ipsum dolor sit amet</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit eaque voluptatem accusantium.</p>
-              </div>
-              <div class="dotlineE"></div>
-              <div class="e_box"> <a href="#"><img src="ev_img3.jpg" width="121" height="78" alt="ev_img3"/></a>
-                <h3>July 18, 2010 <br/>
-                  Lorem ipsum dolor sit amet</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit eaque voluptatem accusantium.</p>
-              </div>
-            </div>
-            <div class="btn clsFloatRight">
-              <p><a href="#">Read more</a></p>
-            </div>
-          </div>
-          <div id="comp">
-            <h2>Competition Masters</h2>
-            <div class="comp_list">
-              <div class="c_box">
-                <div class="flagbulletin"></div>
-                <h3>July 18, 2010</h3>
-                <p>Lorem ipsum dolor sit amet consectetur </p>
-              </div>
-              <div class="dotlineC"></div>
-              <div class="c_box">
-                <div class="flagbulletin"></div>
-                <h3>July 18, 2010</h3>
-                <p>Lorem ipsum dolor sit amet consectetur </p>
-              </div>
-              <div class="dotlineC"></div>
-              <div class="c_box">
-                <div class="flagbulletin"></div>
-                <h3>July 18, 2010</h3>
-                <p>Lorem ipsum dolor sit amet consectetur </p>
-              </div>
-              <div class="dotlineC"></div>
-              <div class="c_box">
-                <div class="flagbulletin"></div>
-                <h3>July 18, 2010</h3>
-                <p>Lorem ipsum dolor sit amet consectetur </p>
-              </div>
-              <div class="dotlineC"></div>
-              <div class="c_box">
-                <div class="flagbulletin"></div>
-                <h3>July 18, 2010</h3>
-                <p>Lorem ipsum dolor sit amet consectetur </p>
-              </div>
-            </div>
-            <div class="btn clsFloatRight">
-              <p><a href="#">&nbsp;&nbsp;All news</a></p>
-            </div>
-          </div>
+        	<% flash.each do |key, value| %>
+      			<div class="flash <%= key %>"><%= value %></div>
+    		<% end %>
+        	<%= yield %>
         </div>
 		
         <div id="right" class="clsFloatRight">

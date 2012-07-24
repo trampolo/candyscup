@@ -1,4 +1,7 @@
 class TeamsController < ApplicationController
+  
+  before_filter :require_user
+
   # GET /teams
   # GET /teams.json
   def index
