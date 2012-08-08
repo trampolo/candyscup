@@ -457,3 +457,7 @@ select, input, textarea {
   margin-left: 50px ;
   margin-right: auto ;
 }
+.description {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

@@ -1,3 +1,6 @@
+
+<div class="center">
+
 <%= form_for(@team) do |f| %>
   <% if @team.errors.any? %>
     <div id="error_explanation">
@@ -16,10 +19,19 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= f.label :stadium %><br />
+    <%= f.text_field :stadium %>
+  </div>
+  <div class="field" >
+    <%= f.label :colour_one %><br />
+    <%= f.text_field :colour_one, :class => 'color' %>
+  </div>
+  <div class="field">
+    <%= f.label :colour_two %><br />
+    <%= f.text_field :colour_two, :class => 'color'   %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Done", :class => 'btn' %>
   </div>
 <% end %>
+</div>

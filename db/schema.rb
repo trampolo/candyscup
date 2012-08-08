@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120705151608) do
+ActiveRecord::Schema.define(:version => 20120807144821) do
 
   create_table "days", :force => true do |t|
     t.integer  "number"
@@ -70,6 +70,9 @@ ActiveRecord::Schema.define(:version => 20120705151608) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "stadium"
+    t.string   "colour_one"
+    t.string   "colour_two"
   end
 
   add_index "teams", ["user_id"], :name => "index_teams_on_user_id"
@@ -82,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20120705151608) do
     t.string   "persistence_token"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "team_id"
   end
 
 end
