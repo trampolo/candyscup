@@ -454,10 +454,10 @@ select, input, textarea {
 	font: 99% arial,helvetica,clean,sans-serif;
 }
 .center {
-  margin-left: 50px ;
+  margin-left: 30px;
   margin-right: auto ;
 }
 .description {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 40px;
+	padding-bottom: 10px;
 }
