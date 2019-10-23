@@ -43,7 +43,9 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    haml (3.1.6)
+    haml (5.0.0)
+      temple (>= 0.8.0)
+      tilt
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -94,7 +96,9 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.6)
     sqlite3 (1.3.6-x86-mingw32)
+    temple (0.8.2)
     thor (0.15.4)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -106,6 +110,7 @@ GEM
       multi_json (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
